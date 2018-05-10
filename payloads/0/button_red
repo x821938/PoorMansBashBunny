@@ -1,0 +1,6 @@
+#!/bin/bash
+LED RED OFF
+
+ATTACKMODE STOR_RNDIS
+
+LED RED ON

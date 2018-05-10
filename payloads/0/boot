@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Just turn on the two leds when the PI is booted. We now know it's ready for pushing the buttons
+LED GREEN ON
+LED RED ON

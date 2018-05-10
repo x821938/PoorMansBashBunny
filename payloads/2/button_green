@@ -1,0 +1,2 @@
+#!/bin/bash
+halt # If the green button is pressed, just shut down the PI gracefully

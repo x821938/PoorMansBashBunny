@@ -1,0 +1,13 @@
+[Service]
+ExecStart=/usr/bin/python /bunny/bin/bunny-launcher.py
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-pibunny
+User=root
+Group=root
+Environment=NODE_ENV=production
+WorkingDirectory=/bunny/
+
+[Install]
+WantedBy=multi-user.target
