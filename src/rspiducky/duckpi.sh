@@ -32,7 +32,7 @@ kb="$kbddevice keyboard"
 
 # ASJ - changed keyconvertion to ass. array - more flexible
 declare -A conv
-if [ "$ketboardLayout" == "US" ] || [ "$keyboardLayout" == "" ]; then
+if [ "$keyboardLayout" == "US" ] || [ "$keyboardLayout" == "" ]; then
 	conv[" "]='space'
 	conv["!"]='left-shift 1'
 	conv["."]='period'
