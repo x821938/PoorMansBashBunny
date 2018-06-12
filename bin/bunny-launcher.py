@@ -80,7 +80,7 @@ def handleButtons():
            logging.info ("{} button pressed.".format(buttonName))
            launchFile = PAYLOAD_DIR + "/" + str(getSwitch()) + "/button_" + buttonName 
            if os.path.exists(launchFile): # The file exists
-               logging.info("Launching scrupt at: {0}".format(launchFile))
+               logging.info("Launching script at: {0}".format(launchFile))
                Popen(launchFile) # We launch it in the background
                time.sleep(0.3) # Avoid key bouncing
            else: # File didn't exist
@@ -114,7 +114,7 @@ def runBootScript():
 
 # Handles incoming socket connections to control the leds
 class ledService(rpyc.Service):
-    def on_connect(self): # Do nothing when somebody connects
+    def on_connect(self, conn): # Do nothing when somebody connects
         pass
 
     def on_disconnect(self, conn): # Do nothing when somebody disconnects
